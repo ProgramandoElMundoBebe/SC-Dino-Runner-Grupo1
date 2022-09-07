@@ -1,5 +1,5 @@
 import pygame
-from dino_runner.components.cactus import Cactus
+from components.cactus import Cactus
 from utils.constants import LARGE_CACTUS, SMALL_CACTUS
 
 
@@ -13,7 +13,7 @@ class ObstacleManager():
             self.obstacles.append(Cactus(LARGE_CACTUS))
 
         for obstacle in self.obstacles:
-            obstacle.update(game.game:speed, self.obstacles)
+            obstacle.update(game.game_speed, self.obstacles)
             if game.dinosaur.dino_rect.colliderect(obstacle.rect):
                 pygame.time.delay(300)
                 game.playing = False

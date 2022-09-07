@@ -1,7 +1,7 @@
 import pygame
-from dino_runner.components.obstacle_manager import ObstacleManager
-from dino_runner.utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
-from dino_runner.utils import text_utils
+from components.obstacle_manager import ObstacleManager
+from utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
+from utils import text_utils
 
 from components.dinisaur import Dinosaur
 
@@ -84,13 +84,13 @@ class Game:
 
         self.handle_key_events_menu()
 
-    def shpw_options_menu(self):
+    def show_options_menu(self):
         half_screen_height = SCREEN_HEIGHT // 2
         half_screen_width = SCREEN_WIDTH // 2
 
-        text, text_rect = text_utils.get_text_element('Press any Key to Star')
+        text, text_rect = text_utils.get_text_element('Press any Key to Star', half_screen_width, half_screen_height)
 
-        self.screen.blit(text_rect)
+        self.screen.blit(text, text_rect)
 
     def handle_key_events_menu(self):
         for event in pygame.event.get():
