@@ -5,6 +5,8 @@ import os
 TITLE = "Chrome Dino Runner"
 SCREEN_HEIGHT = 600
 SCREEN_WIDTH = 1100
+HALF_SCREEN_HEIGHT = SCREEN_HEIGHT // 2
+HALF_SCREEN_WIDTH = SCREEN_WIDTH // 2
 FPS = 30
 IMG_DIR = os.path.join(os.path.dirname(__file__), "..", "assets")
 
