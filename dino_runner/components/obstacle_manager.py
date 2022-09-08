@@ -1,6 +1,7 @@
 import pygame
 from components.cactus import Cactus
-from utils.constants import LARGE_CACTUS, SMALL_CACTUS
+from components.bird import Bird
+from utils.constants import LARGE_CACTUS, SMALL_CACTUS, BIRD
 
 
 class ObstacleManager():
@@ -11,6 +12,7 @@ class ObstacleManager():
         if len(self.obstacles) == 0:
             self.obstacles.append(Cactus(SMALL_CACTUS))
             self.obstacles.append(Cactus(LARGE_CACTUS))
+            self.obstacles.append(Bird(BIRD))
 
         for obstacle in self.obstacles:
             obstacle.update(game.game_speed, self.obstacles)
