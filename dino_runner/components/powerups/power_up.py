@@ -3,7 +3,7 @@ from pygame.sprite import Sprite
 
 from utils.constants import HALF_SCREEN_HEIGHT, HALF_SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_WIDTH
 
-class PowerUpe(Sprite): #para moverse y decirle que es un elemento disponible para mostrarse en pantalla
+class PowerUp(Sprite): #para moverse y decirle que es un elemento disponible para mostrarse en pantalla
     def __init__(self, image, type):
         self.image = image
         self.rect = self.image.get_rect()

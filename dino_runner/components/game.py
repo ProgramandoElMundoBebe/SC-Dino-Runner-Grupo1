@@ -1,6 +1,7 @@
 import pygame
 from components.obstacle_manager import ObstacleManager
-from utils.constants import BG, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
+from components.powerups.powerup_manager import PowerUpManager
+from utils.constants import BG, HALF_SCREEN_HEIGHT, HALF_SCREEN_WIDTH, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 from utils import text_utils
 
 from components.dinosaur import Dinosaur
@@ -97,10 +98,10 @@ class Game:
         half_screen_width = SCREEN_WIDTH // 2
 
         text, text_rect = text_utils.get_text_element('Press any Key to Star', half_screen_width, half_screen_height)
-
+        
         self.screen.blit(text, text_rect)
 
-        self.screen.blit(RUNNING[0], (half_screen_width = ))
+        self.screen.blit(RUNNING[0], (HALF_SCREEN_WIDTH - 20, HALF_SCREEN_HEIGHT - 140))
 
     def handle_key_events_menu(self):
         for event in pygame.event.get():
