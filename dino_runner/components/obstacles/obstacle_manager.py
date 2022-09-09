@@ -1,6 +1,6 @@
 import pygame
-from components.cactus import Cactus
-from components.bird import Bird
+from components.obstacles.cactus import Cactus
+from components.obstacles.bird import Bird
 from utils.constants import LARGE_CACTUS, SMALL_CACTUS, BIRD
 
 

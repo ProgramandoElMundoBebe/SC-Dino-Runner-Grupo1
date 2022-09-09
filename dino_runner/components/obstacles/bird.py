@@ -1,5 +1,5 @@
 import random
-from components.obstacle import Obstacle
+from components.obstacles.obstacle import Obstacle
 
 class Bird(Obstacle):
     def __init__(self, image):

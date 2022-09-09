@@ -1,5 +1,5 @@
 import pygame
-from components.obstacle_manager import ObstacleManager
+from components.obstacles.obstacle_manager import ObstacleManager
 from components.powerups.powerup_manager import PowerUpManager
 from utils.constants import BG, HALF_SCREEN_HEIGHT, HALF_SCREEN_WIDTH, ICON, RUNNING, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 from utils import text_utils
