@@ -13,7 +13,7 @@ class PowerUpManager:
         self.generate_power_ups()
         for power_up in self.power_ups:
             power_up.update(game.game_speed, self.power_ups)
-            if game.dinosaur.dino_rect.collidrect(power_up.rect):
+            if game.dinosaur.dino_rect.colliderect(power_up.rect):
                 power_up.start_time = pygame.time.get_ticks()
                 game.dinosaur.isShieldType = True
                 game.dinosaur.type = power_up.type

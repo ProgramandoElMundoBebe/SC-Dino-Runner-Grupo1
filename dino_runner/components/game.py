@@ -1,7 +1,7 @@
 import pygame
 from components.obstacle_manager import ObstacleManager
 from components.powerups.powerup_manager import PowerUpManager
-from utils.constants import BG, HALF_SCREEN_HEIGHT, HALF_SCREEN_WIDTH, ICON, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
+from utils.constants import BG, HALF_SCREEN_HEIGHT, HALF_SCREEN_WIDTH, ICON, RUNNING, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 from utils import text_utils
 
 from components.dinosaur import Dinosaur
@@ -35,7 +35,9 @@ class Game:
             self.draw()
 
     def reset_components(self):
-        self.obstacles
+        self.obstacle_manager.reset_obstacles()
+        self.powerup_manager.reset_power_ups()
+        self.points = 0
 
     def execute(self):
         while self.game_running:
