@@ -1,8 +1,10 @@
+from winsound import PlaySound
 import pygame
 from components.obstacles.obstacle_manager import ObstacleManager
 from components.powerups.powerup_manager import PowerUpManager
 from utils.constants import BG, HALF_SCREEN_HEIGHT, HALF_SCREEN_WIDTH, ICON, RUNNING, SCREEN_HEIGHT, SCREEN_WIDTH, TITLE, FPS
 from utils import text_utils
+#from components.sound import PlaySound
 
 from components.dinosaur import Dinosaur
 
@@ -24,6 +26,7 @@ class Game:
         self.points = 0
         self.game_running = True
         self.dinosaur_shield = False
+        #self.playsound = PlaySound('Crome Dino.mp4')
 
     def run(self):
         # Game loop: events - update - draw
@@ -83,6 +86,9 @@ class Game:
         text, text_rect = text_utils.get_score_element(self.points)
         self.screen.blit(text, text_rect)
 
+    #def play_sound(self):
+        #self.playsound()
+
     def show_menu(self):
         self.game_running = True
 
@@ -99,11 +105,18 @@ class Game:
         half_screen_height = SCREEN_HEIGHT // 2
         half_screen_width = SCREEN_WIDTH // 2
 
+        #if self.playing == True:
         text, text_rect = text_utils.get_text_element('Press any Key to Star', half_screen_width, half_screen_height)
         
         self.screen.blit(text, text_rect)
 
         self.screen.blit(RUNNING[0], (HALF_SCREEN_WIDTH - 20, HALF_SCREEN_HEIGHT - 140))
+
+        #text, text_rect = text_utils.get_text_element('¿do you want to restart?', half_screen_width, half_screen_height)
+        
+        #self.screen.blit(text, text_rect)
+
+        #self.screen.blit(RUNNING[0], (HALF_SCREEN_WIDTH - 20, HALF_SCREEN_HEIGHT - 140))
 
     def handle_key_events_menu(self):
         for event in pygame.event.get():
